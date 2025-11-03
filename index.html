@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Sênior - Lord Iny</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple: #2d004a;
+  --pink: #ff69b4;
+  --glass: rgba(255,255,255,0.08);
+  --text: #fff;
+}
+html, body {
+  margin: 0;
+  height: 100%;
+  background: linear-gradient(180deg, #40006a 0%, #160026 100%);
+  color: var(--text);
+  overflow: hidden;
+}
+.intro {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.name {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(90px, 14vw, 220px);
+  display: flex;
+  gap: 8px;
+  letter-spacing: 4px;
+}
+.letter {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s cubic-bezier(.25,.8,.25,1);
+}
+.permission {
+  position: absolute;
+  bottom: 40px;
+  display: none;
+  justify-content: center;
+  background: var(--pink);
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255,105,180,0.6);
+  animation: pulse 1.8s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 20px rgba(255,105,180,0.6);}
+  50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(255,105,180,0.8);}
+  100% { transform: scale(1); box-shadow: 0 0 20px rgba(255,105,180,0.6);}
+}/* Main page */
+.main {
+display: none;
+position: fixed;
+inset: 0;
+background: url('https://i.postimg.cc/FK4sS31N/fdcf8132d9ae4ae12736cc108113952c.jpg') center/cover no-repeat;
+}
+.menu-dot {
+position: fixed;
+top: 20px;
+right: 20px;
+width: 48px;
+height: 48px;
+border-radius: 12px;
+background: var(--glass);
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+.menu-panel {
+position: fixed;
+top: 75px;
+right: 20px;
+display: none;
+flex-direction: column;
+background: rgba(0,0,0,0.7);
+border-radius: 10px;
+padding: 10px;
+z-index: 10;
+}
+.menu-panel a, .menu-panel button {
+background: rgba(255,255,255,0.08);
+color: white;
+text-decoration: none;
+padding: 10px;
+border: none;
+border-radius: 8px;
+text-align: left;
+margin-bottom: 6px;
+cursor: pointer;
+}
+.audio-btn {
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 58px;
+height: 58px;
+border-radius: 50%;
+background: var(--pink);
+display: none;
+align-items: center;
+justify-content: center;
+color: white;
+font-size: 26px;
+border: none;
+cursor: pointer;
+box-shadow: 0 0 20px rgba(255,105,180,0.6);
+}
+.info-page {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(15,0,30,0.96);
+overflow: auto;
+padding: 40px;
+}
+.info-card {
+max-width: 900px;
+margin: auto;
+background: rgba(255,255,255,0.06);
+padding: 30px;
+border-radius: 12px;
+line-height: 1.6;
+}
+.back-btn {
+position: fixed;
+top: 18px;
+left: 18px;
+padding: 8px 14px;
+background: var(--pink);
+color: white;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+}
+</style>
+
+</head>
+<body><!-- INTRO --><section class="intro" id="intro">
+  <div class="name" id="name"></div>
+  <button class="permission" id="permBtn">Tocar música de entrada 🎵</button>
+</section><!-- MAIN PAGE --><section class="main" id="main">
+  <div class="menu-dot" id="menuDot">
+    <div style="display:flex;flex-direction:column;gap:6px">
+      <div style="width:6px;height:6px;background:white;border-radius:50%"></div>
+      <div style="width:6px;height:6px;background:white;border-radius:50%"></div>
+      <div style="width:6px;height:6px;background:white;border-radius:50%"></div>
+    </div>
+  </div>  <nav class="menu-panel" id="menuPanel">
+    <a href="https://wa.me/258856562554" target="_blank">WhatsApp</a>
+    <a href="https://inygujamo87-cell.github.io/S-niory-Iny/" target="_blank">Bíblia Digital</a>
+    <a href="https://inygujamo87-cell.github.io/S-nior-di-rio-pessoal-/" target="_blank">Diário Pessoal</a>
+    <button id="infoBtn">ℹ️ Sobre</button>
+  </nav><button class="audio-btn" id="audioBtn">🔊</button>
+
+</section><!-- INFO PAGE --><section class="info-page" id="infoPage">
+  <button class="back-btn" id="backBtn">← Voltar</button>
+  <div class="info-card">
+    <h2>Sobre a Empresa Digital Sênior</h2>
+    <p>A Sênior é uma empresa criada sob a visão inovadora do CEO Lord Iny, unindo tecnologia, arte e inteligência artificial em um único ecossistema digital. O objetivo é oferecer soluções modernas e inspiradoras que conectam criatividade e poder tecnológico.</p><h2>A Imagem</h2>
+<p>A imagem escolhida representa a essência da marca: energia, força e visão digital. O contraste de cores e formas transmite o equilíbrio entre inovação e elegância, refletindo o universo de Lord Iny.</p>
+
+<h2>Sobre o CEO — Lord Iny</h2>
+<p>Lord Iny é um estrategista nato, visionário e líder criativo. Reconhecido por sua inteligência digital e suas habilidades notáveis em jogos competitivos como Free Fire, onde demonstra tática, precisão e domínio absoluto das mecânicas de combate.</p>
+
+<h2>Visão e Missão</h2>
+<p>A Sênior nasce para ser referência no mundo digital, criando experiências únicas e impactantes. A empresa busca elevar a tecnologia à forma de arte — onde cada projeto carrega o toque singular do Lord Iny, unindo elegância e poder.</p>
+
+  </div>
+</section><!-- MÚSICA EMBUTIDA (Royalty-Free Exemplo) --><audio id="music" loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio><script>
+const nameEl = document.getElementById('name');
+const permBtn = document.getElementById('permBtn');
+const main = document.getElementById('main');
+const music = document.getElementById('music');
+const audioBtn = document.getElementById('audioBtn');
+const infoPage = document.getElementById('infoPage');
+const backBtn = document.getElementById('backBtn');
+const infoBtn = document.getElementById('infoBtn');
+const menuDot = document.getElementById('menuDot');
+const menuPanel = document.getElementById('menuPanel');
+
+const word = 'Sênior';
+[...word].forEach((ch,i)=>{
+  const span=document.createElement('span');
+  span.className='letter';span.textContent=ch;
+  nameEl.appendChild(span);
+  setTimeout(()=>{span.style.opacity=1;span.style.transform='translateY(0)'},i*400);
+});
+setTimeout(()=>{permBtn.style.display='flex';}, word.length*400 + 1000);
+
+permBtn.onclick=async()=>{
+  try{music.volume=0.5;await music.play();}catch(e){}
+  document.getElementById('intro').style.display='none';
+  main.style.display='block';
+  audioBtn.style.display='flex';
+};
+
+let playing=true;
+audioBtn.onclick=()=>{
+  if(playing){music.pause();audioBtn.textContent='🔇';}
+  else {music.play();audioBtn.textContent='🔊';}
+  playing=!playing;
+};
+
+menuDot.onclick=(e)=>{
+  e.stopPropagation();
+  menuPanel.style.display = menuPanel.style.display==='flex'?'none':'flex';
+};
+document.addEventListener('click',()=>menuPanel.style.display='none');
+
+infoBtn.onclick=()=>{main.style.display='none';infoPage.style.display='block';};
+backBtn.onclick=()=>{infoPage.style.display='none';main.style.display='block';};
+</script></body>
+</html>
